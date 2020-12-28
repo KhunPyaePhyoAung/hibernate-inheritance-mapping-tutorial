@@ -5,4 +5,4 @@
 3.  Table Per Subclass
 
 
-![enter image description here](https://www.javatpoint.com/images/hibernate/inheritance1.jpg)
+![enter image description here](https://github.com/KhunPyaePhyoAung/hibernate-inheritance-mapping-tutorial/blob/master/resources/hibernate-inheritance-mapping.png)
