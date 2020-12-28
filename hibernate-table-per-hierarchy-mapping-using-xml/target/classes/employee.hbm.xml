@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+    <hibernate-mapping>
+
+        <class name="me.khun.hibernate.entity.Employee" table="employee" discriminator-value="employee">
+            <id name="id">
+                <generator class="identity"></generator>
+            </id>
+            <discriminator column="type" type="string"></discriminator>
+            <property name="name"></property>
+
+            <subclass name="me.khun.hibernate.entity.RegularEmployee" discriminator-value="regular_employee">
+                <property name="salary"></property>
+                <property name="bonus"></property>
+            </subclass>
+
+            <subclass name="me.khun.hibernate.entity.ContractEmployee" discriminator-value="contract_employee">
+                <property name="payPerHour">
+                    <column name="pay_per_hour"></column>
+                </property>
+                <property name="contractPeriod">
+                    <column name="contract_period"></column>
+                </property>
+            </subclass>
+        </class>
+
+    </hibernate-mapping>
