@@ -8,7 +8,7 @@
 
         <class name="me.khun.hibernate.entity.Employee" table="employee">
             <id name="id">
-                <generator class="increment"></generator>
+                <generator class="auto"></generator>
             </id>
             <property name="name"></property>
 
